@@ -1,0 +1,10 @@
+# Optimize speed/size of deployments by not uploading those files
+.idea/
+.vscode/
+cypress/
+coverage/
+.editorconfig
+.env.local.example
+README.md
+yarn.lock
+yarn-error.log
