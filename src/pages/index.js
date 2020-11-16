@@ -1,4 +1,4 @@
-import BrandIcon from "../components/BrandIcon";
+import BrandIcon from "../svg/BrandIcon";
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
-function BrandIcon(props) {
+export default function BrandIcon(props): JSX.Element {
   return (
-    <svg id="prefix__Layer_1" data-name="Layer 1" viewBox="0 0 82.26 92.47" {...props}>
+    <svg viewBox="0 0 82.26 92.47" {...props}>
       <defs>
         <style>{".prefix__cls-6{fill-rule:evenodd;fill:#350f2b}"}</style>
       </defs>
@@ -10,8 +10,7 @@ function BrandIcon(props) {
       <path fill="#872835" fillRule="evenodd" d="M6.83 27.13l34.3 19.39v39.21L6.83 65.76V27.13z" />
       <path
         fill="#ff5d5f"
-        fillRul
-        e="evenodd"
+        fillRule="evenodd"
         d="M64.37 33.19v26.54L41.11 72.87v-7.05l17.17-9.69V43.87l-17.15 9.66v-7.01l23.24-13.33z"
       />
       <path
@@ -27,5 +26,3 @@ function BrandIcon(props) {
     </svg>
   );
 }
-
-export default BrandIcon;
