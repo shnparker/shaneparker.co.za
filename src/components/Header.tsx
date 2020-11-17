@@ -2,8 +2,8 @@ import { ReactEventHandler, ReactNode, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Transition } from "@headlessui/react";
-import CloseIcon from "svg/CloseIcon";
-import MenuIcon from "svg/MenuIcon";
+import CloseIcon from "@/svg/CloseIcon";
+import MenuIcon from "@/svg/MenuIcon";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function Header() {
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16">
           <div className="flex">
-            <div className="hidden sm:ml-6 sm:flex">
+            <div className="hidden sm:flex">
               <DesktopItem href="/">Home</DesktopItem>
               <DesktopItem href="/about">About</DesktopItem>
               <DesktopItem href="/tech">Tech</DesktopItem>
@@ -79,9 +79,9 @@ function DesktopItem({ href, children }: HeaderItemProps) {
   return (
     <Link href={href}>
       <a
-        className={`ml-8 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out ${
+        className={`ml-8 first:ml-0 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out ${
           isActive
-            ? "text-gray-900 border-red-500 focus:border-red-700"
+            ? "text-gray-900 border-brand-red focus:border-brand-red-dark"
             : "text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:text-gray-700 focus:border-gray-300"
         }`}
       >
@@ -103,10 +103,10 @@ function MobileItem({ href, children, onClick }: MobileHeaderItemProps) {
     <Link href={href}>
       <a
         onClick={onClick}
-        className={`mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out ${
+        className={`mt-1 first:mt-0 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out ${
           isActive
-            ? "text-red-700 bg-red-50 focus:outline-none"
-            : "hover:border-red-700 focus:text-red-800 focus:bg-red-100"
+            ? "text-brand-red-dark bg-red-50 focus:outline-none"
+            : "hover:border-brand-red focus:text-brand-red-dark focus:bg-red-100"
         }`}
       >
         {children}

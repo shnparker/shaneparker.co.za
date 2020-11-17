@@ -2,11 +2,16 @@ import Head from "next/head";
 import "@/styles/index.css";
 import Header from "@/components/Header";
 import Container from "@/components/Container";
+import Footer from "@/components/Footer";
 
 function MyApp({ Component, pageProps }) {
   const description = "Software developer from Cape Town, South Africa";
   const title = "Shane Parker";
-  const imageUrl = "TODO";
+  const url = "https://shaneparker.co.za";
+  const twitter = "@shnparker";
+
+  const imageUrl =
+    "https://res.cloudinary.com/shnparker/image/upload/v1605625835/social-media/linkedin_cover_ljgktr.png";
 
   return (
     <div>
@@ -25,12 +30,12 @@ function MyApp({ Component, pageProps }) {
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@shnparker" />
-        <meta name="twitter:creator" content="@shnparker" />
+        <meta name="twitter:site" content={twitter} />
+        <meta name="twitter:creator" content={twitter} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={imageUrl} />
-        <meta property="og:url" content={`https://shaneparker.co.za`} />
+        <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -43,6 +48,9 @@ function MyApp({ Component, pageProps }) {
         <main>
           <Component {...pageProps} />
         </main>
+      </Container>
+      <Container>
+        <Footer />
       </Container>
     </div>
   );

@@ -5,6 +5,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 module.exports = withBundleAnalyzer({
+  images: {
+    domains: ["res.cloudinary.com"],
+  },
   pageExtensions: ["js", "jsx", "ts", "tsx"],
   webpack: (config, { isServer }) => {
     config.node = {

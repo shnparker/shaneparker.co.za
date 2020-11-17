@@ -11,9 +11,33 @@ module.exports = {
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        "twitter-blue": "rgb(29,161,242)",
+        "linkedin-blue": "#0a66c2",
+        "brand-blue": "#00b6c9",
+        "brand-red": {
+          default: "#ff5d5f",
+          dark: "#872835",
+          "extra-dark": "#350f2b",
+        },
+      },
+      typography: (theme) => ({
+        default: {
+          css: {
+            a: {
+              color: theme("colors.brand-red.default"),
+              "&:hover": {
+                color: theme("colors.brand-red.dark"),
+              },
+            },
+          },
+        },
+      }),
     },
   },
-  variants: {},
+  variants: {
+    margin: ["responsive", "first"],
+  },
   plugins: [
     require("@tailwindcss/ui", function ({ addBase, addComponents, theme }) {
       addBase([
