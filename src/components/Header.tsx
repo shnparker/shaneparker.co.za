@@ -1,11 +1,11 @@
-import CloseIcon from "svg/CloseIcon";
-import MenuIcon from "svg/MenuIcon";
 import { ReactEventHandler, ReactNode, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Transition } from "@headlessui/react";
+import CloseIcon from "svg/CloseIcon";
+import MenuIcon from "svg/MenuIcon";
 
-export default function Header(): JSX.Element {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleSelectItem() {
@@ -46,19 +46,19 @@ export default function Header(): JSX.Element {
         leave="duration-100 ease-in"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
-        className={`block sm:hidden`}
+        className="block sm:hidden"
       >
         <div className="pt-2 pb-3">
-          <MobileItem href="/" handleItemClick={() => handleSelectItem()}>
+          <MobileItem href="/" onClick={() => handleSelectItem()}>
             Home
           </MobileItem>
-          <MobileItem href="/about" handleItemClick={() => handleSelectItem()}>
+          <MobileItem href="/about" onClick={() => handleSelectItem()}>
             About
           </MobileItem>
-          <MobileItem href="/tech" handleItemClick={() => handleSelectItem()}>
+          <MobileItem href="/tech" onClick={() => handleSelectItem()}>
             Tech
           </MobileItem>
-          <MobileItem href="/contact" handleItemClick={() => handleSelectItem()}>
+          <MobileItem href="/contact" onClick={() => handleSelectItem()}>
             Ask me things
           </MobileItem>
         </div>
@@ -70,10 +70,6 @@ export default function Header(): JSX.Element {
 interface HeaderItemProps {
   href: string;
   children: ReactNode;
-}
-
-interface MobileHeaderItemProps extends HeaderItemProps {
-  handleItemClick: ReactEventHandler;
 }
 
 function DesktopItem({ href, children }: HeaderItemProps) {
@@ -95,14 +91,18 @@ function DesktopItem({ href, children }: HeaderItemProps) {
   );
 }
 
-function MobileItem({ href, children, handleItemClick }: MobileHeaderItemProps) {
+interface MobileHeaderItemProps extends HeaderItemProps {
+  onClick: ReactEventHandler;
+}
+
+function MobileItem({ href, children, onClick }: MobileHeaderItemProps) {
   const { pathname } = useRouter();
   const isActive = pathname === href;
 
   return (
     <Link href={href}>
       <a
-        onClick={handleItemClick}
+        onClick={onClick}
         className={`mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out ${
           isActive
             ? "text-red-700 bg-red-50 focus:outline-none"

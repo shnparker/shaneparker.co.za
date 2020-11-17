@@ -1,4 +1,6 @@
-export default function BrandIcon(props): JSX.Element {
+import { SVGAttributes } from "react";
+
+export default function BrandIcon(props: SVGAttributes<SVGElement>) {
   return (
     <svg viewBox="0 0 82.26 92.47" {...props}>
       <defs>
