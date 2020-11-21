@@ -1,12 +1,11 @@
 import { ReactEventHandler, ReactNode, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Transition } from "@headlessui/react";
 import CloseIcon from "@/svg/CloseIcon";
 import MenuIcon from "@/svg/MenuIcon";
 import BrandIcon from "svg/BrandIcon";
 
-export default function Header() {
+export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleSelectItem() {
