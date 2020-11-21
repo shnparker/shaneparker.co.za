@@ -2,20 +2,11 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{tsx}"],
+  darkMode: "media",
   theme: {
     extend: {
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-      },
-      colors: {
-        "twitter-blue": "rgb(29,161,242)",
-        "linkedin-blue": "#0a66c2",
-        "brand-blue": "#00b6c9",
-        "brand-red": {
-          DEFAULT: "#ff5d5f",
-          dark: "#872835",
-          "extra-dark": "#350f2b",
-        },
       },
       screens: {
         standalone: { raw: "(display-mode: standalone)" },
@@ -24,9 +15,9 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme("colors.brand-red.default"),
+              color: theme("colors.red.500"),
               "&:hover": {
-                color: theme("colors.brand-red.dark"),
+                color: theme("colors.red.400"),
               },
             },
           },

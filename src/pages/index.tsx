@@ -1,20 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
-import BrandIcon from "@/svg/BrandIcon";
 
 export default function Home() {
   return (
     <section className="py-16">
       <div className="text-center">
-        <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+        <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl dark:text-white">
           Hi, I'm Shane.
         </p>
-        <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">I build software for the web.</p>
+        <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-gray-300">
+          I build software for the web.
+        </p>
       </div>
 
-      <div className="bg-white overflow-hidden">
+      <div className="overflow-hidden">
         <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
+          <div className="hidden lg:block bg-gray-50 dark:bg-gray-800 absolute top-0 bottom-0 left-3/4 w-screen"></div>
           <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
             <div className="relative lg:row-start-1 lg:col-start-2">
               <svg
@@ -38,7 +39,7 @@ export default function Home() {
                       y="0"
                       width="4"
                       height="4"
-                      className="text-gray-200"
+                      className="text-gray-200 dark:text-gray-600"
                       fill="currentColor"
                     />
                   </pattern>
@@ -57,7 +58,7 @@ export default function Home() {
                       className="rounded-lg shadow-lg object-cover object-center"
                     />
                   </div>
-                  <figcaption className="flex mt-3 text-sm text-gray-500">
+                  <figcaption className="flex mt-3 text-sm text-gray-500 dark:text-gray-400">
                     Photograph by Megan Burnett
                   </figcaption>
                 </figure>
@@ -65,21 +66,21 @@ export default function Home() {
             </div>
             <div className="mt-8 lg:mt-0">
               <div className="text-base max-w-prose mx-auto lg:max-w-none">
-                <p className="text-lg text-gray-500">
+                <p className="text-lg text-gray-500 dark:text-white">
                   I'm a software engineer with an affinity for frontend development and
                   people-orientated collaboration. I also co-founded{" "}
                   <a
                     href="http://sitestack.co.za"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline text-brand-red hover:text-brand-red-dark"
+                    className="underline text-red-500 hover:text-red-400"
                   >
                     Sitestack
                   </a>{" "}
                   to add a human layer ontop of technology for small businesses.
                 </p>
               </div>
-              <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+              <div className="mt-5 prose text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 dark:text-gray-300">
                 <p>
                   I currently spend the majority of my time in React and Next.js. After hours, I'm a
                   gaming nerd and enjoy hiking in the luxuries Cape Town has to offer.

@@ -7,7 +7,7 @@ import "@/styles/index.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <div className="dark:bg-gray-900">
       <Header />
       <Container>
         <Nav />
