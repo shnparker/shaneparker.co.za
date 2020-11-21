@@ -1,10 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   content: ["./src/**/*.{tsx}"],
   theme: {
     extend: {
@@ -16,7 +12,7 @@ module.exports = {
         "linkedin-blue": "#0a66c2",
         "brand-blue": "#00b6c9",
         "brand-red": {
-          default: "#ff5d5f",
+          DEFAULT: "#ff5d5f",
           dark: "#872835",
           "extra-dark": "#350f2b",
         },
@@ -25,7 +21,7 @@ module.exports = {
         standalone: { raw: "(display-mode: standalone)" },
       },
       typography: (theme) => ({
-        default: {
+        DEFAULT: {
           css: {
             a: {
               color: theme("colors.brand-red.default"),
@@ -42,29 +38,8 @@ module.exports = {
     margin: ["responsive", "first"],
   },
   plugins: [
-    require("@tailwindcss/ui", function ({ addBase, addComponents, theme }) {
-      addBase([
-        {
-          "@font-face": {
-            fontFamily: "Inter var",
-            fontWeight: "100 900",
-            fontStyle: "normal",
-            fontNamedInstance: "Regular",
-            fontDisplay: "swap",
-            src: 'url("/fonts/Inter-roman.var-latin.woff2?3.13") format("woff2")',
-          },
-        },
-        {
-          "@font-face": {
-            fontFamily: "Inter var",
-            fontWeight: "100 900",
-            fontStyle: "italic",
-            fontNamedInstance: "Italic",
-            fontDisplay: "swap",
-            src: 'url("/fonts/Inter-italic.var-latin.woff2?3.13") format("woff2")',
-          },
-        },
-      ]);
-    }),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
   ],
 };

@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { Transition } from "@headlessui/react";
 import CloseIcon from "@/svg/CloseIcon";
 import MenuIcon from "@/svg/MenuIcon";
+import BrandIcon from "svg/BrandIcon";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +15,14 @@ export default function Header() {
 
   return (
     <nav>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
           <div className="flex">
-            <div className="hidden sm:flex">
+            <div className="flex-shrink-0 flex items-center">
+              <BrandIcon className="block lg:hidden h-16 mt-2 -ml-2 w-auto" />
+              <BrandIcon className="hidden lg:block h-16 mt-2 w-auto" />
+            </div>
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <DesktopItem href="/">Home</DesktopItem>
               <DesktopItem href="/about">About</DesktopItem>
               <DesktopItem href="/tech">Tech</DesktopItem>
@@ -26,29 +31,20 @@ export default function Header() {
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-              aria-label="Main menu"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-red"
               aria-expanded="false"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <MenuIcon className={`${isOpen ? "hidden" : "block"} h-6 w-6`} />
-              <CloseIcon className={`${isOpen ? "block" : "hidden"} h-6 w-6`} />
+              <span className="sr-only">Open main menu</span>
+              <MenuIcon className={`${isOpen ? "hidden" : "block"} h-6 w-6`} aria-hidden="true" />
+              <CloseIcon className={`${isOpen ? "block" : "hidden"} h-6 w-6`} aria-hidden="true" />
             </button>
           </div>
         </div>
       </div>
 
-      <Transition
-        show={isOpen}
-        enter="duration-200 ease-out"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="duration-100 ease-in"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
-        className="block sm:hidden"
-      >
-        <div className="pt-2 pb-3">
+      <div className={`${isOpen ? "block" : "hidden"} sm:hidden`}>
+        <div className="pt-2 pb-3 space-y-1">
           <MobileItem href="/" onClick={() => handleSelectItem()}>
             Home
           </MobileItem>
@@ -62,7 +58,7 @@ export default function Header() {
             Ask me things
           </MobileItem>
         </div>
-      </Transition>
+      </div>
     </nav>
   );
 }
@@ -79,10 +75,10 @@ function DesktopItem({ href, children }: HeaderItemProps) {
   return (
     <Link href={href}>
       <a
-        className={`ml-8 first:ml-0 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out ${
+        className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium focus:outline-none ${
           isActive
-            ? "text-gray-900 border-brand-red focus:border-brand-red-dark"
-            : "text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:text-gray-700 focus:border-gray-300"
+            ? "border-brand-red text-gray-900"
+            : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
         }`}
       >
         {children}
@@ -103,10 +99,10 @@ function MobileItem({ href, children, onClick }: MobileHeaderItemProps) {
     <Link href={href}>
       <a
         onClick={onClick}
-        className={`mt-1 first:mt-0 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out ${
+        className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
           isActive
-            ? "text-brand-red-dark bg-red-50 focus:outline-none"
-            : "hover:border-brand-red focus:text-brand-red-dark focus:bg-red-100"
+            ? "border-brand-red text-brand-red-dark bg-red-50"
+            : "border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
         }`}
       >
         {children}

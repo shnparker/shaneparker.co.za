@@ -6,20 +6,17 @@ export default function Home() {
   return (
     <section className="py-16">
       <div className="text-center">
-        <BrandIcon className="inline-block h-24 w-24 rounded-full" />
-        <p className="mt-1 text-4xl leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
+        <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
           Hi, I'm Shane.
         </p>
-        <p className="max-w-xl mt-5 mx-auto text-xl leading-7 text-gray-500">
-          I build software for the web.
-        </p>
+        <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">I build software for the web.</p>
       </div>
 
       <div className="bg-white overflow-hidden">
         <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
-          <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-            <div className="relative mb-8 lg:mb-0 lg:row-start-1 lg:col-start-2">
+          <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+            <div className="relative lg:row-start-1 lg:col-start-2">
               <svg
                 className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
                 width="404"
@@ -50,14 +47,14 @@ export default function Home() {
               </svg>
               <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
                 <figure>
-                  <div className="relative">
+                  <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                     <Image
                       src="https://res.cloudinary.com/shnparker/image/upload/c_crop,g_custom/v1605639970/photos/PSX_20190114_223926_diytaa.jpg"
                       alt="Picture of the author with trees in the background"
                       width="1184"
                       height="1376"
                       loading="eager"
-                      className="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
+                      className="rounded-lg shadow-lg object-cover object-center"
                     />
                   </div>
                   <figcaption className="flex mt-3 text-sm text-gray-500">
@@ -66,9 +63,9 @@ export default function Home() {
                 </figure>
               </div>
             </div>
-            <div>
+            <div className="mt-8 lg:mt-0">
               <div className="text-base max-w-prose mx-auto lg:max-w-none">
-                <p>
+                <p className="text-lg text-gray-500">
                   I'm a software engineer with an affinity for frontend development and
                   people-orientated collaboration. I also co-founded{" "}
                   <a
@@ -82,7 +79,7 @@ export default function Home() {
                   to add a human layer ontop of technology for small businesses.
                 </p>
               </div>
-              <div className="mt-4 prose text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+              <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
                 <p>
                   I currently spend the majority of my time in React and Next.js. After hours, I'm a
                   gaming nerd and enjoy hiking in the luxuries Cape Town has to offer.
