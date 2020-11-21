@@ -21,6 +21,9 @@ module.exports = {
           "extra-dark": "#350f2b",
         },
       },
+      screens: {
+        standalone: { raw: "(display-mode: standalone)" },
+      },
       typography: (theme) => ({
         default: {
           css: {
