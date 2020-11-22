@@ -1,10 +1,14 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: ["./src/**/*.{tsx}"],
   darkMode: "media",
   theme: {
     extend: {
+      colors: {
+        cyan: colors.cyan,
+      },
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
@@ -15,7 +19,17 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme("colors.red.500"),
+              color: theme("colors.cyan.500"),
+              "&:hover": {
+                color: theme("colors.cyan.400"),
+              },
+            },
+          },
+        },
+        dark: {
+          css: {
+            a: {
+              color: theme("colors.red.600"),
               "&:hover": {
                 color: theme("colors.red.400"),
               },
@@ -26,7 +40,7 @@ module.exports = {
     },
   },
   variants: {
-    margin: ["responsive", "first"],
+    typography: ["responsive", "dark"],
   },
   plugins: [
     require("@tailwindcss/forms"),

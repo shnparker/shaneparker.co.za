@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <section className="py-16">
       <div className="text-center">
-        <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl dark:text-white">
+        <p className="mt-2 md:mt-10 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl dark:text-white">
           Hi, I'm Shane.
         </p>
         <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-gray-300">
@@ -16,7 +16,7 @@ export default function Home() {
       <div className="overflow-hidden">
         <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="hidden lg:block bg-gray-50 dark:bg-gray-800 absolute top-0 bottom-0 left-3/4 w-screen"></div>
-          <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+          <div className="mt-4 md:mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
             <div className="relative lg:row-start-1 lg:col-start-2">
               <svg
                 className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
@@ -48,7 +48,7 @@ export default function Home() {
               </svg>
               <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
                 <figure>
-                  <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
+                  <div className="aspect-w-12 md:aspect-h-7 lg:aspect-none">
                     <Image
                       src="https://res.cloudinary.com/shnparker/image/upload/c_crop,g_custom/v1605639970/photos/PSX_20190114_223926_diytaa.jpg"
                       alt="Picture of the author with trees in the background"
@@ -73,14 +73,14 @@ export default function Home() {
                     href="http://sitestack.co.za"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline text-red-500 hover:text-red-400"
+                    className="underline text-cyan-600 hover:text-cyan-400 dark:text-red-600 dark:hover:text-red-400"
                   >
                     Sitestack
                   </a>{" "}
                   to add a human layer ontop of technology for small businesses.
                 </p>
               </div>
-              <div className="mt-5 prose text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 dark:text-gray-300">
+              <div className="mt-5 prose prose-cyan dark:prose-dark text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 dark:text-gray-300">
                 <p>
                   I currently spend the majority of my time in React and Next.js. After hours, I'm a
                   gaming nerd and enjoy hiking in the luxuries Cape Town has to offer.

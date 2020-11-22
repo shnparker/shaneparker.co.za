@@ -30,7 +30,7 @@ export default function Nav() {
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600 dark:focus:ring-red-600"
               aria-expanded="false"
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -76,7 +76,7 @@ function DesktopItem({ href, children }: HeaderItemProps) {
       <a
         className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium focus:outline-none ${
           isActive
-            ? "border-red-500 text-gray-900 dark:text-white"
+            ? "border-cyan-600 dark:border-red-600 text-gray-900 dark:text-white"
             : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300"
         }`}
       >
@@ -100,7 +100,7 @@ function MobileItem({ href, children, onClick }: MobileHeaderItemProps) {
         onClick={onClick}
         className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
           isActive
-            ? "border-red-500 text-red-700 bg-red-50"
+            ? "border-cyan-600 dark:border-red-600 text-cyan-700 dark:text-red-700 bg-cyan-50 dark:bg-red-50"
             : "border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
         }`}
       >
