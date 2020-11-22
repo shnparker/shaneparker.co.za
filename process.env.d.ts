@@ -4,6 +4,7 @@ declare global {
       NODE_ENV: "development" | "production";
       NEXT_PUBLIC_APP_STAGE: "test" | "development" | "staging" | "production";
       NEXT_PUBLIC_APP_NAME: string;
+      SENTRY_DSN?: string;
     }
   }
 }
