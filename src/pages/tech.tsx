@@ -1,6 +1,6 @@
 export default function Tech() {
   function handleError() {
-    throw new Error();
+    throw new Error("Caught error with sentry");
   }
 
   return (
