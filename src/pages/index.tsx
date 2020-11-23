@@ -80,7 +80,7 @@ export default function Home() {
                   to add a human layer ontop of technology for small businesses.
                 </p>
               </div>
-              <div className="mt-5 prose prose-cyan dark:prose-dark text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 dark:text-gray-300">
+              <div className="mt-5 prose dark:prose-dark text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 dark:text-gray-300">
                 <p>
                   I currently spend the majority of my time in React and Next.js. After hours, I'm a
                   gaming nerd and enjoy hiking in the luxuries Cape Town has to offer.

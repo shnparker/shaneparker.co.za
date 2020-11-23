@@ -19,9 +19,9 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme("colors.cyan.500"),
+              color: theme("colors.cyan.700"),
               "&:hover": {
-                color: theme("colors.cyan.400"),
+                color: theme("colors.cyan.500"),
               },
             },
           },

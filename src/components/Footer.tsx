@@ -30,7 +30,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base text-gray-600 dark:text-gray-500">
+          <p className="text-center text-base text-gray-600 dark:text-gray-400">
             &copy; {new Date().getFullYear()} Shane Parker. All rights reserved.
           </p>
         </div>
