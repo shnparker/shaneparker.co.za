@@ -50,7 +50,7 @@ export default function Home() {
                 <figure>
                   <div className="aspect-w-12 md:aspect-h-7 lg:aspect-none">
                     <Image
-                      src="https://res.cloudinary.com/shnparker/image/upload/c_crop,g_custom/v1605639970/photos/PSX_20190114_223926_diytaa.jpg"
+                      src="https://res.cloudinary.com/shnparker/image/upload/c_scale,w_560/v1605639970/photos/PSX_20190114_223926_diytaa.jpg"
                       alt="Picture of the author with trees in the background"
                       width="1184"
                       height="1376"
