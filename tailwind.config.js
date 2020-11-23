@@ -29,7 +29,7 @@ module.exports = {
         dark: {
           css: {
             a: {
-              color: theme("colors.red.600"),
+              color: theme("colors.red.500"),
               "&:hover": {
                 color: theme("colors.red.400"),
               },

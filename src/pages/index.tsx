@@ -73,7 +73,7 @@ export default function Home() {
                     href="http://sitestack.co.za"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline text-cyan-600 hover:text-cyan-400 dark:text-red-600 dark:hover:text-red-400"
+                    className="underline text-cyan-700 hover:text-cyan-500 dark:text-red-500 dark:hover:text-red-400"
                   >
                     Sitestack
                   </a>{" "}
