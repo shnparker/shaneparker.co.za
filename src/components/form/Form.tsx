@@ -1,6 +1,6 @@
 import * as Sentry from "@sentry/node";
 import { useState } from "react";
-import { Formik, Form as FormikForm } from "formik";
+import { Formik, Form as FormikForm, FormikValues } from "formik";
 import { string, object, InferType } from "yup";
 import Alert from "components/shared/Alert";
 import SpinnerIcon from "svg/SpinnerIcon";
@@ -9,13 +9,12 @@ import TextArea from "./TextArea";
 import Button from "components/shared/Button";
 
 const formSchema = object().shape({
-  name: string().max(50, "Who's name is this long?").required("This is required"),
-  email: string().email("Please enter a valid email").required("This is required"),
-  phone: string(),
+  name: string().max(64, "Who's name is this long?").required("This is required"),
+  email: string().email("Please enter a valid email").trim().required("This is required"),
+  phone: string().max(17, "Please enter a valid phone number"),
   message: string().required("This is required"),
 });
 
-type FormSubmission = InferType<typeof formSchema>;
 type FormStatus = {
   submitting: boolean;
   submitted: boolean;
@@ -39,7 +38,7 @@ export default function Form() {
     info: { error: false, msg: null },
   });
 
-  function handleSubmit(values: FormSubmission) {
+  function handleSubmit(values: FormikValues, callback: Function) {
     if (values.phone) {
       Sentry.captureMessage("Honeypot entry detected. Aborting contact form submission");
       return;
@@ -60,6 +59,7 @@ export default function Form() {
         .then((response) => {
           if (response.status === 200) {
             handleServerResponse(true, "Thank you, your message has been submitted.");
+            callback();
           } else {
             Sentry.captureException("Contact form submissions error");
             handleServerResponse(false, "Something went wrong. I've been notified of this issue.");
@@ -73,6 +73,8 @@ export default function Form() {
       setTimeout(() => {
         setStatus((prevStatus) => ({ ...prevStatus, submitting: false }));
         handleServerResponse(true, "Thank you, your message has been submitted.");
+        alert(JSON.stringify(values));
+        callback();
       }, 1000);
       clearTimeout();
     }
@@ -99,7 +101,9 @@ export default function Form() {
     <Formik
       initialValues={initialState}
       validationSchema={formSchema}
-      onSubmit={(values) => handleSubmit(values)}
+      onSubmit={(values, { resetForm }) => {
+        handleSubmit(values, resetForm);
+      }}
     >
       {({ errors, touched }) => (
         <FormikForm className="grid grid-cols-1 gap-y-6">
