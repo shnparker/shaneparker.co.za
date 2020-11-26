@@ -8,14 +8,14 @@ export default function Contact() {
     <section className="py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight dark:text-white text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold tracking-tight dark:text-white text-gray-900 sm:text-5xl">
             Get in touch
           </h2>
           <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-400">
             Ask me any question about anything you want.
           </p>
         </div>
-        <div className="mt-12">
+        <div className="my-14">
           <Form />
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
-        <div className="mt-12">
+        <div className="mt-16">
           <h2 className="text-2xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-3xl mb-4">
             Learn more about contact preferences
           </h2>
