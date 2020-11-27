@@ -1,5 +1,5 @@
 import { ReactEventHandler } from "react";
-import CloseIcon from "svg/CloseIcon";
+import CloseIcon from "~/svg/CloseIcon";
 
 interface Props {
   message: string;

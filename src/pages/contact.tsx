@@ -1,7 +1,13 @@
-import Form from "@/components/form/Form";
-import GitHubIcon from "svg/GitHubIcon";
-import LinkedInIcon from "svg/LinkedInIcon";
-import TwitterIcon from "svg/TwitterIcon";
+import * as Sentry from "@sentry/node";
+import { useState } from "react";
+import { Formik, Form, FormikValues } from "formik";
+import { string, object } from "yup";
+import Alert from "~/components/shared/Alert";
+import SpinnerIcon from "~/svg/SpinnerIcon";
+import TextField from "~/components/shared/TextField";
+import TextArea from "~/components/shared/TextArea";
+import Button from "~/components/shared/Button";
+import SocialLinks from "~/components/shared/SocialLinks";
 
 export default function Contact() {
   return (
@@ -16,7 +22,7 @@ export default function Contact() {
           </p>
         </div>
         <div className="my-14">
-          <Form />
+          <ContactForm />
         </div>
       </div>
 
@@ -28,27 +34,7 @@ export default function Contact() {
             to meet up.
           </p>
           <div className="flex pt-4 space-x-6">
-            <a
-              href="https://www.twitter.com/shnparker"
-              className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
-            >
-              <span className="sr-only">Twitter</span>
-              <TwitterIcon className="h-6 w-6" aria-hidden="true" />
-            </a>
-            <a
-              href="https://www.github.com/shnparker"
-              className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
-            >
-              <span className="sr-only">GitHub</span>
-              <GitHubIcon className="h-6 w-6" aria-hidden="true" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/shnparker/"
-              className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
-            >
-              <span className="sr-only">LinkedIn</span>
-              <LinkedInIcon className="h-6 w-6" aria-hidden="true" />
-            </a>
+            <SocialLinks />
           </div>
         </div>
         <div className="mt-16">
@@ -72,5 +58,161 @@ export default function Contact() {
         </div>
       </div>
     </section>
+  );
+}
+
+function ContactForm() {
+  interface FormStatus {
+    submitting: boolean;
+    submitted: boolean;
+    info: {
+      error: boolean;
+      msg: string | null;
+    };
+  }
+
+  const formSchema = object().shape({
+    name: string().max(64, "Who's name is this long?").required("This is required"),
+    email: string().email("Please enter a valid email").trim().required("This is required"),
+    phone: string().max(17, "Please enter a valid phone number"),
+    message: string().required("This is required"),
+  });
+
+  const initialState = {
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  };
+  const [showAlert, setShowAlert] = useState(false);
+  const [status, setStatus] = useState<FormStatus>({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  });
+
+  function handleSubmit(values: FormikValues, callback: Function) {
+    if (values.phone) {
+      Sentry.captureMessage("Honeypot entry detected. Aborting contact form submission");
+      return;
+    }
+
+    if (process.env.NEXT_PUBLIC_APP_STAGE !== "development") {
+      setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+      fetch("https://formspree.io/f/mayldoyd", {
+        method: "POST",
+        mode: "cors",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify(values),
+      })
+        .then((response) => {
+          if (response.status === 200) {
+            handleServerResponse(true, "Thank you, your message has been submitted.");
+            callback();
+          } else {
+            Sentry.captureException("Contact form submissions error");
+            handleServerResponse(false, "Something went wrong. I've been notified of this issue.");
+          }
+        })
+        .catch((error) => {
+          handleServerResponse(false, error.response.data.error);
+        });
+    } else {
+      setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+      setTimeout(() => {
+        setStatus((prevStatus) => ({ ...prevStatus, submitting: false }));
+        handleServerResponse(true, "Thank you, your message has been submitted.");
+        alert(JSON.stringify(values));
+        callback();
+      }, 1000);
+      clearTimeout();
+    }
+  }
+
+  function handleServerResponse(ok: boolean, msg: string | null) {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg },
+      });
+    } else {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: true, msg: msg },
+      });
+    }
+    setShowAlert(true);
+  }
+
+  return (
+    <Formik
+      initialValues={initialState}
+      validationSchema={formSchema}
+      onSubmit={(values, { resetForm }) => {
+        handleSubmit(values, resetForm);
+      }}
+    >
+      {({ errors, touched }) => (
+        <Form className="grid grid-cols-1 gap-y-6">
+          <TextField
+            label="name"
+            id="name"
+            name="name"
+            placeholder="Name"
+            error={errors.name}
+            showMessage={errors.name && touched.name}
+          />
+          <TextField
+            label="email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            error={errors.email}
+            showMessage={errors.email && touched.email}
+          />
+          <TextField
+            className="hidden"
+            label="name"
+            id="name"
+            name="name"
+            placeholder="Name"
+            error={errors.name}
+            showMessage={errors.name && touched.name}
+          />
+          <TextArea
+            label="message"
+            id="message"
+            name="message"
+            placeholder="Message"
+            error={errors.message}
+            showMessage={errors.message && touched.message}
+          />
+          <div>
+            <Button type="submit">
+              <>
+                {status.submitting && <SpinnerIcon />}
+                Submit
+              </>
+            </Button>
+          </div>
+          {showAlert && (
+            <div className="mb-2">
+              <Alert
+                variant={status.info.error ? "error" : "success"}
+                message={status.info.msg}
+                onHide={() => setShowAlert(false)}
+              />
+            </div>
+          )}
+        </Form>
+      )}
+    </Formik>
   );
 }

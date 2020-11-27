@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <section className="py-16">
       <div className="text-center">
-        <p className="mt-2 md:mt-10 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl dark:text-white">
+        <h1 className="mt-2 md:mt-10 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl dark:text-white">
           Hi, I'm Shane.
-        </p>
+        </h1>
         <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-gray-300">
           I build software for the web.
         </p>
@@ -83,14 +83,11 @@ export default function Home() {
               <div className="mt-5 prose dark:prose-dark text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 dark:text-gray-300">
                 <p>
                   I currently spend the majority of my time in React and Next.js. After hours, I'm a
-                  gaming nerd and enjoy hiking in the luxuries Cape Town has to offer.
+                  gamer, musician and gym enthusiast.
                 </p>
                 <p>Here's some cool facts about me:</p>
                 <ul>
-                  <li>
-                    I try to be as minimalist as possible in all life aspects. Get rid of your
-                    things if you want to be happy.
-                  </li>
+                  <li>I'm minimalist as possible in all life aspects. Get rid of your things.</li>
                   <li>
                     I love listening to and making music.{" "}
                     <a
@@ -102,8 +99,8 @@ export default function Home() {
                     </a>
                   </li>
                   <li>
-                    My 1RM deadlift was 170kg, before a shoulder injury ruined it all (we'll get
-                    back there eventually).
+                    I've been contemplating starting a youtube chanel for years. Teaching things is
+                    one way to ensure you know what you're talking about.
                   </li>
                 </ul>
                 <p>

@@ -1,10 +1,10 @@
 import * as Sentry from "@sentry/node";
 import { AppProps } from "next/app";
-import Nav from "@/components/Nav";
-import Header from "@/components/Header";
-import Container from "@/components/Container";
-import Footer from "@/components/Footer";
-import "@/styles/index.css";
+import Nav from "~/components/layout/Nav";
+import Header from "~/components/layout/Header";
+import Container from "~/components/layout/Container";
+import Footer from "~/components/layout/Footer";
+import "~/styles/tailwind.css";
 
 if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
   Sentry.init({

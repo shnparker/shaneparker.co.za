@@ -1,10 +1,3 @@
-/**
- * CUSTOMIZE APP DOCUEMNT
- *
- * A custom Document is commonly used to augment your application's <html> and <body> tags.
- * @see https://github.com/vercel/next.js/#custom-document
- */
-
 import * as Sentry from "@sentry/node";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
