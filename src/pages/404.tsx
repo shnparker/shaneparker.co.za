@@ -68,7 +68,7 @@ export default function NotFound() {
                       this site was built
                     </li>
                     <li>
-                      <Link href="/about">
+                      <Link href="/contact">
                         <a className="underline text-cyan-700 hover:text-cyan-500 dark:text-red-500 dark:hover:text-red-400">
                           Ask me anything
                         </a>
