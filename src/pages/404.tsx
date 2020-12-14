@@ -39,7 +39,15 @@ export default function NotFound() {
                     <li>
                       You've made a typo on the url <code>{asPath}</code>.
                     </li>
-                    <li>The link is broken, please mail me.</li>
+                    <li>
+                      The link is broken,{" "}
+                      <Link href="/contact">
+                        <a className="underline text-cyan-700 hover:text-cyan-500 dark:text-red-500 dark:hover:text-red-400">
+                          please mail me
+                        </a>
+                      </Link>
+                      .
+                    </li>
                   </ul>
                 </dd>
               </div>
