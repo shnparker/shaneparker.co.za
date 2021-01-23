@@ -28,32 +28,73 @@ export default function Contact() {
 
       <div className="relative px-4 sm:px-6 lg:px-8">
         <div className="text-lg max-w-prose mx-auto">
-          <p className="mt-8 text-xl  text-gray-500 dark:text-gray-400 leading-8">
-            Want to grab a coffee instead? Give me a call at +(27)-23... I'm not putting my phone
-            number on the internet lol. Hit me up on this form or on my LinkedIn and we can arrange
-            to meet up.
+          <p className="mt-8 text-xl pb-8 text-gray-500 dark:text-gray-400 leading-8">
+            Want to grab a coffee instead? Hit me up on this form or on my LinkedIn and we can
+            arrange to meet up.
           </p>
           <div className="flex pt-4 space-x-6">
             <SocialLinks />
           </div>
         </div>
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-3xl mb-4">
-            Learn more about contact preferences
+      </div>
+
+      <div>
+        <div className="max-w-7xl mx-auto pt-16 px-4 divide-y-2 divide-gray-200 sm:pt-28 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
+            Frequently asked questions
           </h2>
-          <div className="text-gray-500 dark:text-gray-400 text-lg">
-            <p className="mb-4">
-              I'm a rather private person concerned about the state of personal information on the
-              internet. I prefer not to share personal details with bots and scrapers, and have
-              provided appropriate methods of contact above. It might not prevent data harvesting,
-              but it's something.
-            </p>
-            <p>
-              I believe social media to be a plague on society. I have no social media of any kind,
-              unless you count LinkedIn for professional use only. Twitter is a tool to keep up with
-              updates in the tech space and I will not reply on there, but you can follow me for any
-              news I might post. Please email me instead to make contact.
-            </p>
+          <div className="mt-6 pt-10">
+            <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
+              <div>
+                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                  Why can&apos;t I find your email or number?
+                </dt>
+                <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                  I'm a rather private person concerned about the state of personal information on
+                  the internet. I prefer not to share personal details with people until I am
+                  comfortable to do so, and have provided appropriate methods of contact above.
+                </dd>
+              </div>
+
+              <div>
+                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                  Where are your social media links?
+                </dt>
+                <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                  I do not have any social media accounts. If you need to get in touch with me,
+                  please send me an email with the form above, or use LinkedIn.
+                </dd>
+              </div>
+
+              <div>
+                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                  Why can't I toggle dark mode if you support it?
+                </dt>
+                <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                  I can add this feature if requested, but I thought it be easiest if the site
+                  follows system preferences.
+                </dd>
+              </div>
+
+              <div>
+                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                  Can I inspect the code for this website?
+                </dt>
+                <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                  I've made this project repository public. Feel free to scratch through it by
+                  following{" "}
+                  <a
+                    href="https://www.github.com/shnparker"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-cyan-700 hover:text-cyan-500 dark:text-red-500 dark:hover:text-red-400"
+                  >
+                    this link
+                  </a>
+                  .
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
       </div>

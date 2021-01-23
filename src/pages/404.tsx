@@ -27,7 +27,7 @@ export default function NotFound() {
           <div className="mt-12 lg:mt-0 lg:col-span-2">
             <dl className="space-y-12">
               <div>
-                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                <dt className="text-xl leading-6 font-medium text-gray-900 dark:text-white">
                   How did I get here?
                 </dt>
                 <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
@@ -52,8 +52,8 @@ export default function NotFound() {
                 </dd>
               </div>
 
-              <div>
-                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+              <div className="pt-12">
+                <dt className="text-xl leading-6 font-medium text-gray-900 dark:text-white">
                   Where do I go now?
                 </dt>
                 <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
@@ -89,11 +89,11 @@ export default function NotFound() {
             </dl>
           </div>
 
-          <div className="text-center mt-16 text-gray-900 dark:text-white">
+          <div className="text-center mt-24 text-gray-900 dark:text-white">
             <p className="text-xl font-bold">
               Still not sure? Have some cake. Cake fixes everything.
             </p>
-            <CakeIcon className="inline-block h-40 w-40 text-cyan-700 dark:text-red-500 mt-20 lg:mt-28" />
+            <CakeIcon className="inline-block h-40 w-40 lg:h-60 lg:w-60 xl:h-80 xl:w-80 text-cyan-700 dark:text-red-500 mt-20 lg:mt-28" />
           </div>
         </div>
       </div>

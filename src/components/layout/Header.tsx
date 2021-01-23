@@ -4,7 +4,6 @@ export default function Header() {
   const description = "Software developer from Cape Town, South Africa";
   const title = "Shane Parker";
   const url = "https://shaneparker.co.za";
-  const twitter = "@shnparker";
 
   const imageUrl =
     "https://res.cloudinary.com/shnparker/image/upload/v1605625835/social-media/linkedin_cover_ljgktr.png";
@@ -24,13 +23,7 @@ export default function Header() {
       <meta name="theme-color" content="#ffffff" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
 
-      {/* SEO Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={twitter} />
-      <meta name="twitter:creator" content={twitter} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={imageUrl} />
+      {/* SEO Tags, don't have twitter */}
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />

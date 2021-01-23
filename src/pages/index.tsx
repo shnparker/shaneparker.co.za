@@ -68,39 +68,25 @@ export default function Home() {
               <div className="text-base max-w-prose mx-auto lg:max-w-none">
                 <p className="text-lg text-gray-500 dark:text-white">
                   I'm a software engineer with an affinity for frontend development and
-                  people-orientated collaboration. I also co-founded{" "}
-                  <a
-                    href="http://sitestack.co.za"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline text-cyan-700 hover:text-cyan-500 dark:text-red-500 dark:hover:text-red-400"
-                  >
-                    Sitestack
-                  </a>{" "}
-                  to add a human layer ontop of technology for small businesses.
+                  people-orientated collaboration. I aim to add a human layer ontop of technology.
                 </p>
               </div>
               <div className="mt-5 prose dark:prose-dark text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 dark:text-gray-300">
                 <p>
                   I currently spend the majority of my time in React and Next.js. After hours, I'm a
-                  gamer, musician and gym enthusiast.
+                  gamer, musician and exercise enthusiast.
                 </p>
                 <p>Here's some cool facts about me:</p>
                 <ul>
                   <li>I'm minimalist as possible in all life aspects. Get rid of your things.</li>
-                  <li>
-                    I love listening to and making music.{" "}
-                    <a
-                      href="http://bmthorizon.co/PH.SH/?iqid=website.masthead"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      AOTY 2020 pick
-                    </a>
-                  </li>
+                  <li>Recently I've taken up the practise of daily meditation.</li>
                   <li>
                     I've been contemplating starting a youtube chanel for years. Teaching things is
                     one way to ensure you know what you're talking about.
+                  </li>
+                  <li>
+                    I'm confident that blockchain technology will change the future for certain
+                    industries.
                   </li>
                 </ul>
                 <p>
@@ -120,6 +106,33 @@ export default function Home() {
                   . Remember to stay hydrated.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between text-center lg:text-left">
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <span className="block text-gray-900 dark:text-white">
+              Want to build cool things together?
+            </span>
+            <span className="block text-cyan-600 dark:text-red-600">Let's get started.</span>
+          </h2>
+          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 justify-center lg:justify-start">
+            <div className="inline-flex rounded-md shadow">
+              <Link href="/contact">
+                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-600 dark:bg-red-600 hover:bg-cyan-700 dark:hover:bg-red-700">
+                  Contact me
+                </a>
+              </Link>
+            </div>
+            <div className="ml-3 inline-flex rounded-md shadow">
+              <Link href="/about">
+                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-cyan-600 dark:text-red-600 bg-white hover:bg-cyan-50 dark:hover:bg-cyan-50">
+                  Learn more
+                </a>
+              </Link>
             </div>
           </div>
         </div>
