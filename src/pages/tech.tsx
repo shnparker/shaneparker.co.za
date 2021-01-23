@@ -144,7 +144,7 @@ export default function Tech() {
                   className="relative mx-auto"
                   width="490"
                   height="473"
-                  src="https://res.cloudinary.com/shnparker/image/upload/v1611416964/photos/Screenshot_2021-01-23_at_17.47.39_dwy3pm.png"
+                  src="https://res.cloudinary.com/shnparker/image/upload/v1611433210/photos/Responsive-Design_r8uwb7.png"
                   alt="Night mode version of this website"
                 />
               </div>
