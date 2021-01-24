@@ -26,7 +26,7 @@ export default function Tech() {
                 generation.
               </p>
 
-              <dl className="mt-10 space-y-10">
+              <div className="mt-10 space-y-10">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
@@ -34,13 +34,15 @@ export default function Tech() {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                      Performance and SEO
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
-                      All pages on this site are statically pre-rendered and provide unmatched
-                      performance and SEO thanks to Next.js.
-                    </dd>
+                    <dl>
+                      <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                        Performance and SEO
+                      </dt>
+                      <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                        All pages on this site are statically pre-rendered and provide unmatched
+                        performance and SEO thanks to Next.js.
+                      </dd>
+                    </dl>
                   </div>
                 </div>
 
@@ -51,13 +53,15 @@ export default function Tech() {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                      Automatic image optimization
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
-                      Images are optimized on demand for size, format and responsivitiy to reduce
-                      load times and improve Core Web Vital scores.
-                    </dd>
+                    <dl>
+                      <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                        Automatic image optimization
+                      </dt>
+                      <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                        Images are optimized on demand for size, format and responsivitiy to reduce
+                        load times and improve Core Web Vital scores.
+                      </dd>
+                    </dl>
                   </div>
                 </div>
 
@@ -68,16 +72,18 @@ export default function Tech() {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                      Rapid development
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
-                      The tools and frameworks used allow for rapid and development with minimal
-                      errors and roadblocks.
-                    </dd>
+                    <dl>
+                      <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                        Rapid development
+                      </dt>
+                      <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                        The tools and frameworks used allow for rapid and development with minimal
+                        errors and roadblocks.
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </dl>
+              </div>
             </div>
 
             <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
@@ -102,7 +108,7 @@ export default function Tech() {
                   TailwindUI is a library of excellent designs for developers.
                 </p>
 
-                <dl className="mt-10 space-y-10">
+                <div className="mt-10 space-y-10">
                   <div className="flex">
                     <div className="flex-shrink-0">
                       <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
@@ -110,13 +116,15 @@ export default function Tech() {
                       </div>
                     </div>
                     <div className="ml-4">
-                      <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                        Night mode support
-                      </dt>
-                      <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
-                        This website respects system preferences of the visitor and will adapt it's
-                        color scheme accordingly.
-                      </dd>
+                      <dl>
+                        <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                          Night mode support
+                        </dt>
+                        <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                          This website respects system preferences of the visitor and will adapt
+                          it's color scheme accordingly.
+                        </dd>
+                      </dl>
                     </div>
                   </div>
 
@@ -127,16 +135,18 @@ export default function Tech() {
                       </div>
                     </div>
                     <div className="ml-4">
-                      <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                        Fully responsive
-                      </dt>
-                      <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
-                        By using a mobile-first approach, appropriate scaling has been made for
-                        every viewport.
-                      </dd>
+                      <dl>
+                        <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                          Fully responsive
+                        </dt>
+                        <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                          By using a mobile-first approach, appropriate scaling has been made for
+                          every viewport.
+                        </dd>
+                      </dl>
                     </div>
                   </div>
-                </dl>
+                </div>
               </div>
 
               <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
@@ -161,7 +171,7 @@ export default function Tech() {
                 Next.js provides some user-failure safety nets.
               </p>
 
-              <dl className="mt-10 space-y-10">
+              <div className="mt-10 space-y-10">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
@@ -169,13 +179,15 @@ export default function Tech() {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                      Error monitoring
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
-                      Any errors on this website will be reported to Sentry and I'll be alerted via
-                      email to attend to it.
-                    </dd>
+                    <dl>
+                      <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                        Error monitoring
+                      </dt>
+                      <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                        Any errors on this website will be reported to Sentry and I'll be alerted
+                        via email to attend to it.
+                      </dd>
+                    </dl>
                   </div>
                 </div>
 
@@ -186,13 +198,15 @@ export default function Tech() {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                      Form submission handling
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
-                      The contact page handles and forwards submissions to my email address with
-                      minimal config required.
-                    </dd>
+                    <dl>
+                      <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                        Form submission handling
+                      </dt>
+                      <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                        The contact page handles and forwards submissions to my email address with
+                        minimal config required.
+                      </dd>
+                    </dl>
                   </div>
                 </div>
 
@@ -203,22 +217,24 @@ export default function Tech() {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                      Custom error handling
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
-                      Next.js provides error handling pages to support server errors by default.
-                      I've built a{" "}
-                      <Link href="/nothing">
-                        <a className="underline text-cyan-700 hover:text-cyan-500 dark:text-red-500 dark:hover:text-red-400">
-                          custom 404 page
-                        </a>
-                      </Link>{" "}
-                      to demonstrate overriding.
-                    </dd>
+                    <dl>
+                      <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+                        Custom error handling
+                      </dt>
+                      <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                        Next.js provides error handling pages to support server errors by default.
+                        I've built a{" "}
+                        <Link href="/nothing">
+                          <a className="underline text-cyan-700 hover:text-cyan-500 dark:text-red-500 dark:hover:text-red-400">
+                            custom 404 page
+                          </a>
+                        </Link>{" "}
+                        to demonstrate overriding.
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </dl>
+              </div>
             </div>
 
             <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
