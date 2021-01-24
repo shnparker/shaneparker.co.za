@@ -15,9 +15,9 @@ export default function About() {
         <div className="relative px-4 sm:px-6 lg:px-8">
           <div className="text-lg max-w-prose mx-auto">
             <p className="text-xl text-gray-500 leading-8">
-              Nestled within the confines of the great Table Mountain and it's surrounding areas,
-              was a devloper with a dream to create quality software. This chapter chronicles his
-              journey from junior developer to present day.
+              Nestled within the confines of Table Mountain and the ocean, there was a developer and
+              his computer. This chapter chronicles his journey from junior developer to the present
+              day.
             </p>
           </div>
           <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
@@ -44,10 +44,10 @@ export default function About() {
             <p>
               My first job was to be the frontend developer in a very small team (I was the second
               member). I was solely responsible for the look and feel of the web application, with
-              assistance of my senior mentor. I was exposed to Vue, React and Angular as we
-              experimented with the best solutions for the job. Eventually we decided to stick with
-              Vue. As time went by, we hired more developers. I was placed into a role of
-              responsiblity where I would have to guide these new juniors and spearhead the
+              assistance of my senior mentor. I was exposed to Vue, React, and Angular as we
+              experimented with the best solutions for the job. Eventually, we decided to stick with
+              Vue. As time went by, we hired more developers. I was placed into the role of
+              responsibility where I would have to guide these new juniors and spearhead the
               frontend.
             </p>
             <Image
@@ -66,7 +66,7 @@ export default function About() {
             <p>
               Joining Go2Africa meant becoming more comfortable with a full-stack in Ruby and
               Javascript. When the team became large enough, we split responsibilities for each
-              developer. I became part of the frontend team, with occassional assistance in backend
+              developer. I became part of the frontend team, with occasional assistance in backend
               work. The large majority of my time was spent in React and associated technologies.
               The true potential of what I am capable of was revealed to me through the work I did
               here.
@@ -83,9 +83,9 @@ export default function About() {
             <h2>Chapter 4: The Future</h2>
             <p>
               In the future, I would like to be able to stand alone as a full-stack developer and do
-              any task that is required of me (my love will always remain for frontend). I would
+              any task that is required of me (my love will always remain for the frontend). I would
               love to work with Go, React, and learn more about databases. Being a people person, I
-              envison my future as a manager, looking after the needs of my team and bringing out
+              envision my future as a manager, looking after the needs of my team and bringing out
               the best in others.
             </p>
             <Image
