@@ -29,13 +29,13 @@ export default function About() {
               I developed the skills required to build static websites, help with web applications
               and gained exposure to agile workflows.
             </p>
-            {/* <Image
+            <Image
               className="w-full rounded-lg"
-              src="https://res.cloudinary.com/shnparker/image/upload/v1611493499/photos/21BF3923-F89F-4A52-904B-59FCEBDCF7C8_1_105_c_eadmnj.jpg"
-              alt="Image of the author in 2016"
-              width="873"
+              src="https://res.cloudinary.com/shnparker/image/upload/v1611494550/photos/6176DDE8-0CAE-451C-9DC6-CF179DF38A66_1_105_c_opnv4h.jpg"
+              alt="Me receiving my degree at my graduation"
+              width="1310"
               height="873"
-            /> */}
+            />
             <p>
               As the year drew to a close and my studies finished, I decided to seek permanent
               employment on OfferZen.
@@ -50,20 +50,18 @@ export default function About() {
               responsiblity where I would have to guide these new juniors and spearhead the
               frontend.
             </p>
+            <Image
+              className="w-full rounded-lg"
+              src="https://res.cloudinary.com/shnparker/image/upload/v1611494672/photos/172CD2AF-01D2-4753-8F42-81E3F3559C38_1_105_c_yvv6ls.jpg"
+              alt="Me and my friend at an event"
+              width="1310"
+              height="873"
+            />
             <p>
               Unfortunately, the company went south. After two years, the company was liquidated and
               everybody got retrenched. OfferZen saves the day, again.
             </p>
-            {/* <figure>
-              <img
-                className="w-full rounded-lg"
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
-                alt=""
-                width="1310"
-                height="873"
-              />
-              <figcaption>Sagittis scelerisque nulla cursus in enim consectetur quam.</figcaption>
-            </figure> */}
+
             <h2>Chapter 3: The Developer</h2>
             <p>
               Joining Go2Africa meant becoming more comfortable with a full-stack in Ruby and
@@ -73,6 +71,13 @@ export default function About() {
               The true potential of what I am capable of was revealed to me through the work I did
               here.
             </p>
+            <Image
+              className="w-full rounded-lg"
+              src="https://res.cloudinary.com/shnparker/image/upload/v1611494808/photos/5C8E6C44-E024-4319-86A0-81FD6F5076FF_1_105_c_iinnny.jpg"
+              alt="Me and my colleagues at a work function"
+              width="1310"
+              height="873"
+            />
             <p>Legend has it that I still work here to this day.</p>
 
             <h2>Chapter 4: The Future</h2>
@@ -83,6 +88,13 @@ export default function About() {
               envison my future as a manager, looking after the needs of my team and bringing out
               the best in others.
             </p>
+            <Image
+              className="w-full rounded-lg"
+              src="https://res.cloudinary.com/shnparker/image/upload/v1611494954/photos/CE85AC10-72CB-40DC-8A55-DC6D5A28FC49_1_105_c_ehdfks.jpg"
+              alt="Me and my partner"
+              width="1310"
+              height="873"
+            />
             <p>Prophecies have foretold of what is yet to come.</p>
           </div>
         </div>
