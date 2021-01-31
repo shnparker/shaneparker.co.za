@@ -11,16 +11,16 @@ export default function About() {
           The Tale of Shane: Definitive Edition
         </p>
       </div>
-      <div className="relative py-16 bg-white overflow-hidden">
+      <div className="relative py-16 overflow-hidden">
         <div className="relative px-4 sm:px-6 lg:px-8">
           <div className="text-lg max-w-prose mx-auto">
-            <p className="text-xl text-gray-500 leading-8">
+            <p className="text-xl text-gray-500 dark:text-gray-300 leading-8">
               Nestled within the confines of Table Mountain and the ocean, there was a developer and
               his computer. This chapter chronicles his journey from junior developer to the present
               day.
             </p>
           </div>
-          <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+          <div className="mt-6 prose dark:prose-dark prose-lg text-gray-500 dark:text-gray-300 mx-auto">
             <h2>Chapter 1: The Intern</h2>
             <p>
               I started off working as an intern at Full Facing during the final year of my studies.

@@ -17,7 +17,7 @@ export default function Contact() {
           <h2 className="text-3xl font-extrabold tracking-tight dark:text-white text-gray-900 sm:text-5xl">
             Get in touch
           </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-400">
+          <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
             Ask me any question about anything you want.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function Contact() {
 
       <div className="relative px-4 sm:px-6 lg:px-8">
         <div className="text-lg max-w-prose mx-auto">
-          <p className="mt-8 text-xl pb-8 text-gray-500 dark:text-gray-400 leading-8">
+          <p className="mt-8 text-xl pb-8 text-gray-500 dark:text-gray-300 leading-8">
             Want to grab a coffee instead? Hit me up on this form or on my LinkedIn and we can
             arrange to meet up.
           </p>
@@ -49,7 +49,7 @@ export default function Contact() {
                 <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                   Why can&apos;t I find your email or number?
                 </dt>
-                <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
                   I'm a rather private person concerned about the state of personal information on
                   the internet. I prefer not to share personal details with people until I am
                   comfortable to do so, and have provided appropriate methods of contact above.
@@ -60,7 +60,7 @@ export default function Contact() {
                 <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                   Where are your social media links?
                 </dt>
-                <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
                   I do not have any social media accounts. If you need to get in touch with me,
                   please send me an email with the form above, or use LinkedIn.
                 </dd>
@@ -70,7 +70,7 @@ export default function Contact() {
                 <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                   Why can't I toggle dark mode if you support it?
                 </dt>
-                <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
                   I can add this feature if requested, but I thought it be easiest if the site
                   follows system preferences.
                 </dd>
@@ -80,7 +80,7 @@ export default function Contact() {
                 <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                   Can I inspect the code for this website?
                 </dt>
-                <dd className="mt-2 text-base text-gray-500 dark:text-gray-400">
+                <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
                   I've made this project repository public. Feel free to scratch through it by
                   following{" "}
                   <a

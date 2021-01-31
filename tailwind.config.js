@@ -34,6 +34,9 @@ module.exports = {
                 color: theme("colors.red.400"),
               },
             },
+            h2: {
+              color: theme("colors.white"),
+            },
           },
         },
       }),
