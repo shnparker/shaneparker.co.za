@@ -5,7 +5,7 @@ import CloseIcon from "~/svg/CloseIcon";
 import MenuIcon from "~/svg/MenuIcon";
 import BrandIcon from "~/svg/BrandIcon";
 
-export default function Nav() {
+export default function Nav(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleSelectItem() {
@@ -73,6 +73,7 @@ function DesktopItem({ href, children }: HeaderItemProps) {
 
   return (
     <Link href={href}>
+      {/* eslint-disable-next-line */}
       <a
         className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium focus:outline-none ${
           isActive
@@ -96,6 +97,7 @@ function MobileItem({ href, children, onClick }: MobileHeaderItemProps) {
 
   return (
     <Link href={href}>
+      {/* eslint-disable-next-line */}
       <a
         onClick={onClick}
         className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${

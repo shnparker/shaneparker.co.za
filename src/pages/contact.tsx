@@ -9,7 +9,7 @@ import TextArea from "~/components/shared/TextArea";
 import Button from "~/components/shared/Button";
 import SocialLinks from "~/components/shared/SocialLinks";
 
-export default function Contact() {
+export default function Contact(): JSX.Element {
   return (
     <section className="py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
@@ -50,8 +50,8 @@ export default function Contact() {
                   Why can&apos;t I find your email or number?
                 </dt>
                 <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
-                  I'm a rather private person concerned about the state of personal information on
-                  the internet. I prefer not to share personal details with people until I am
+                  I&apos;m a rather private person concerned about the state of personal information
+                  on the internet. I prefer not to share personal details with people until I am
                   comfortable to do so, and have provided appropriate methods of contact above.
                 </dd>
               </div>
@@ -68,7 +68,7 @@ export default function Contact() {
 
               <div>
                 <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                  Why can't I toggle dark mode if you support it?
+                  Why can&apos;t I toggle dark mode if you support it?
                 </dt>
                 <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
                   I can add this feature if requested, but I thought it be easiest if the site
@@ -81,7 +81,7 @@ export default function Contact() {
                   Can I inspect the code for this website?
                 </dt>
                 <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
-                  I've made this project repository public. Feel free to scratch through it by
+                  I&apos;ve made this project repository public. Feel free to scratch through it by
                   following{" "}
                   <a
                     href="https://www.github.com/shnparker"
@@ -132,7 +132,7 @@ function ContactForm() {
     info: { error: false, msg: null },
   });
 
-  function handleSubmit(values: FormikValues, callback: Function) {
+  function handleSubmit(values: FormikValues, callback: () => void) {
     if (values.phone) {
       Sentry.captureMessage("Honeypot entry detected. Aborting contact form submission");
       return;

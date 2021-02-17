@@ -12,7 +12,7 @@ interface Props {
   showMessage: boolean;
 }
 
-export default function TextArea({ rows = 4, ...props }: Props) {
+export default function TextArea({ rows = 4, ...props }: Props): JSX.Element {
   return (
     <div className={props.className}>
       <label htmlFor={props.name} className="sr-only">

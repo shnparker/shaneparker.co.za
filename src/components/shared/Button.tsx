@@ -7,7 +7,7 @@ interface Props {
   type?: "submit" | "button";
 }
 
-export default function Button({ type = "button", ...props }: Props) {
+export default function Button({ type = "button", ...props }: Props): JSX.Element {
   return (
     <button
       disabled={props.disabled}

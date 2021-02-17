@@ -1,5 +1,5 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme"); // eslint-disable-line
+const colors = require("tailwindcss/colors"); // eslint-disable-line
 
 module.exports = {
   purge: ["./src/**/*.{ts,tsx}"],

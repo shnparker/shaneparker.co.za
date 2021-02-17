@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CheckIcon from "~/svg/CheckIcon";
 
-export default function Tech() {
+export default function Tech(): JSX.Element {
   return (
     <section className="py-16">
       <div className="text-center">
@@ -122,7 +122,7 @@ export default function Tech() {
                         </dt>
                         <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
                           This website respects system preferences of the visitor and will adapt
-                          it's color scheme accordingly.
+                          it&apos;s color scheme accordingly.
                         </dd>
                       </dl>
                     </div>
@@ -184,8 +184,8 @@ export default function Tech() {
                         Error monitoring
                       </dt>
                       <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
-                        Any errors on this website will be reported to Sentry and I'll be alerted
-                        via email to attend to it.
+                        Any errors on this website will be reported to Sentry and I&apos;ll be
+                        alerted via email to attend to it.
                       </dd>
                     </dl>
                   </div>
@@ -223,8 +223,9 @@ export default function Tech() {
                       </dt>
                       <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
                         Next.js provides error handling pages to support server errors by default.
-                        I've built a{" "}
+                        I&apos;ve built a{" "}
                         <Link href="/nothing">
+                          {/* eslint-disable-next-line */}
                           <a className="underline text-cyan-700 hover:text-cyan-500 dark:text-red-500 dark:hover:text-red-400">
                             custom 404 page
                           </a>

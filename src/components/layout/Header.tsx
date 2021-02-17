@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Header() {
+export default function Header(): JSX.Element {
   const description = "Software developer from Cape Town, South Africa";
   const title = "Shane Parker";
   const url = "https://shaneparker.co.za";

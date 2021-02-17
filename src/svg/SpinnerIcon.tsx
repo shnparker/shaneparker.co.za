@@ -1,6 +1,6 @@
 import { SVGAttributes } from "react";
 
-export default function SpinnerIcon(props: SVGAttributes<SVGElement>) {
+export default function SpinnerIcon(props: SVGAttributes<SVGElement>): JSX.Element {
   return (
     <svg
       className="animate-spin -ml-1 mr-3 h-5 w-5"

@@ -1,6 +1,6 @@
 import { SVGAttributes } from "react";
 
-export default function GitHubIcon(props: SVGAttributes<SVGElement>) {
+export default function GitHubIcon(props: SVGAttributes<SVGElement>): JSX.Element {
   return (
     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
       <path

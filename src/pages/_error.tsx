@@ -4,10 +4,10 @@ import { NextPageContext } from "next";
 
 interface Props extends ErrorProps {
   hasGetInitialPropsRun: boolean;
-  err: Object;
+  err: Record<string, unknown>;
 }
 
-const Error = ({ statusCode, hasGetInitialPropsRun, err }: Props) => {
+const Error = ({ statusCode, hasGetInitialPropsRun, err }: Props): JSX.Element => {
   if (!hasGetInitialPropsRun && err) {
     Sentry.captureException(err);
   }

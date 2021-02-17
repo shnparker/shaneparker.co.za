@@ -15,10 +15,10 @@ if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
 }
 
 interface Props extends AppProps {
-  err: Object;
+  err: Record<string, unknown>;
 }
 
-function MyApp({ Component, pageProps, err }: Props) {
+function MyApp({ Component, pageProps, err }: Props): JSX.Element {
   return (
     <div className="dark:bg-gray-900">
       <Header />

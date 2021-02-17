@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <section className="py-16">
       <div className="text-center">
         <h1 className="mt-2 md:mt-10 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl dark:text-white">
-          Hi, I'm Shane.
+          Hi, I&apos;m Shane.
         </h1>
         <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-gray-300">
           I build software for the web.
@@ -67,40 +67,45 @@ export default function Home() {
             <div className="mt-8 lg:mt-0">
               <div className="text-base max-w-prose mx-auto lg:max-w-none">
                 <p className="text-lg text-gray-500 dark:text-white">
-                  I'm a software engineer with an affinity for frontend development and
+                  I&apos;m a software engineer with an affinity for frontend development and
                   people-orientated collaboration. I aim to add a human layer ontop of technology.
                 </p>
               </div>
               <div className="mt-5 prose dark:prose-dark text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 dark:text-gray-300">
                 <p>
-                  I currently spend the majority of my time in React and Next.js. After hours, I'm a
-                  gamer, musician and exercise enthusiast.
+                  I currently spend the majority of my time in React and Next.js. After hours,
+                  I&apos;m a gamer, musician and exercise enthusiast.
                 </p>
-                <p>Here's some cool facts about me:</p>
+                <p>Here&apos;s some cool facts about me:</p>
                 <ul>
-                  <li>I'm minimalist as possible in all life aspects. Get rid of your things.</li>
-                  <li>Recently I've taken up the practise of daily meditation.</li>
                   <li>
-                    I've been contemplating starting a youtube chanel for years. Teaching things is
-                    one way to ensure you know what you're talking about.
+                    I&apos;m minimalist as possible in all life aspects. Get rid of your things.
+                  </li>
+                  <li>Recently I&apos;ve taken up the practise of daily meditation.</li>
+                  <li>
+                    I&apos;ve been contemplating starting a youtube chanel for years. Teaching
+                    things is one way to ensure you know what you&apos;re talking about.
                   </li>
                   <li>
-                    I'm confident that blockchain technology will change the future for certain
+                    I&apos;m confident that blockchain technology will change the future for certain
                     industries.
                   </li>
                 </ul>
                 <p>
-                  If you're interested in{" "}
+                  If you&apos;re interested in{" "}
                   <Link href="/about">
+                    {/* eslint-disable-next-line */}
                     <a>learning more</a>
                   </Link>{" "}
                   about me, my career and my hobbies, feel free to browse around. You can also learn
                   more about{" "}
                   <Link href="/tech">
+                    {/* eslint-disable-next-line */}
                     <a>how this site was built</a>
                   </Link>
                   , or{" "}
                   <Link href="/contact">
+                    {/* eslint-disable-next-line */}
                     <a>ask me questions</a>
                   </Link>
                   . Remember to stay hydrated.
@@ -117,11 +122,12 @@ export default function Home() {
             <span className="block text-gray-900 dark:text-white">
               Want to build cool things together?
             </span>
-            <span className="block text-cyan-600 dark:text-red-600">Let's get started.</span>
+            <span className="block text-cyan-600 dark:text-red-600">Let&apos;s get started.</span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 justify-center lg:justify-start">
             <div className="inline-flex rounded-md shadow">
               <Link href="/contact">
+                {/* eslint-disable-next-line */}
                 <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-600 dark:bg-red-600 hover:bg-cyan-700 dark:hover:bg-red-700">
                   Contact me
                 </a>
@@ -129,6 +135,7 @@ export default function Home() {
             </div>
             <div className="ml-3 inline-flex rounded-md shadow">
               <Link href="/about">
+                {/* eslint-disable-next-line */}
                 <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-cyan-600 dark:text-red-600 bg-white hover:bg-cyan-50 dark:hover:bg-cyan-50">
                   Learn more
                 </a>

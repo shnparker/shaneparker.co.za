@@ -7,7 +7,7 @@ interface Props {
   onHide: ReactEventHandler;
 }
 
-export default function Alert(props: Props) {
+export default function Alert(props: Props): JSX.Element {
   let alertStyles;
 
   switch (props.variant) {

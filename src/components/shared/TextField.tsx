@@ -11,7 +11,7 @@ interface Props {
   showMessage: boolean;
 }
 
-export default function TextField({ type = "text", ...props }: Props) {
+export default function TextField({ type = "text", ...props }: Props): JSX.Element {
   return (
     <div className={props.className}>
       <label htmlFor={props.name} className="sr-only">

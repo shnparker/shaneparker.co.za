@@ -1,7 +1,7 @@
 import GitHubIcon from "~/svg/GitHubIcon";
 import LinkedInIcon from "~/svg/LinkedInIcon";
 
-export default function SocialLinks() {
+export default function SocialLinks(): JSX.Element {
   return (
     <>
       <a
