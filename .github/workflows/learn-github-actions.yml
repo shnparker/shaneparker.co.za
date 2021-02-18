@@ -16,14 +16,20 @@ on:
       - ".*ignore"
       - "yarn.lock"
       - "!**/*.md"
-  workflow_dispatch:
 
 jobs:
   setup-environment:
-    name: Setup deployment environment (Ubuntu 18.04 - Node 14.x)
-    runs-on: ubuntu-18.04
+    name: Setup deployment environment (Ubuntu 20.04 - Node 14.x)
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "14"
+    - name: Checkout latest commit
+      uses: actions/checkout@v2
+
+    - name: Install Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: "14"
+    
+    - name: Install dependancies
+      run: npm install
+    
