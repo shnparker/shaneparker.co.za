@@ -22,14 +22,27 @@ jobs:
     name: Setup deployment environment (Ubuntu 20.04 - Node 14.x)
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout latest commit
+    - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install Node.js
+    - name: Install Node.js 14
       uses: actions/setup-node@v2
       with:
         node-version: "14"
     
     - name: Install dependancies
       run: npm install
+
+  determine-code-validity:
+    name: Ensure code quality adheres to formatting, linting and testing
+    runs-on: ubuntu-latest
+    needs: setup-environment
+    steps:
+    - name: Run formatter
+      run: npm run format:check
+
+    - name: Run linter
+      run: npm run lint
     
+    - name: Run test suite
+      run: npm run test

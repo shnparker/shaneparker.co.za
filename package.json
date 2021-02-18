@@ -9,7 +9,7 @@
     "test": "echo To be implemented",
     "lint": "eslint src/ --ext .ts,.tsx",
     "format": "prettier \"src/**/*{ts,tsx,json,css,html,md}\" --write",
-    "format:dry": "prettier \"src/**/*{ts,tsx,json,css,html,md}\" --check",
+    "format:check": "prettier \"src/**/*{ts,tsx,json,css,html,md}\" --check",
     "analyse": "ANALYZE_BUNDLE=true yarn start"
   },
   "dependencies": {
