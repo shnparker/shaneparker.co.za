@@ -36,10 +36,14 @@ jobs:
     name: Setup deployment environment (Ubuntu 18.04 - Node 14.x)
     runs-on: ubuntu-18.04
     steps:
-      - name: Installing Node.js
+      - name: Checkout latest commit
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
+
       - name: Install dependencies
         run: npm install
 
@@ -50,5 +54,3 @@ jobs:
     steps:
       - name: "Lint and format code"
         run: npm format:check
-        run: npm lint
-        # run: npm test
