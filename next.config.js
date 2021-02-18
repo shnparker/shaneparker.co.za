@@ -1,5 +1,5 @@
-const bundleAnalyzer = require("@next/bundle-analyzer");
-const nextSourceMaps = require("@zeit/next-source-maps");
+const bundleAnalyzer = require("@next/bundle-analyzer"); //eslint-disable-line
+const nextSourceMaps = require("@zeit/next-source-maps"); //eslint-disable-line
 
 const withSourceMaps = nextSourceMaps();
 const withBundleAnalyzer = bundleAnalyzer({
