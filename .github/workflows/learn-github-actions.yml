@@ -18,7 +18,7 @@ on:
       - "!**/*.md"
 
 jobs:
-  setup-environment:
+  build:
     name: Setup deployment environment (Ubuntu 20.04 - Node 14.x)
     runs-on: ubuntu-latest
     steps:
@@ -33,11 +33,6 @@ jobs:
     - name: Install dependancies
       run: npm install
 
-  determine-code-validity:
-    name: Ensure code quality adheres to formatting, linting and testing
-    runs-on: ubuntu-latest
-    needs: setup-environment
-    steps:
     - name: Run formatter
       run: npm run format:check
 
