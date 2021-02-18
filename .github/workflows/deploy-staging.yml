@@ -1,20 +1,9 @@
-# Creates a new preview deployment on Vercel's platform, when anything is pushed in any branch (except for the "master" branch).
-name: Deploy to Vercel (staging)
+name: Deploy staging
+
 on:
   push:
     branches-ignore:
       - "master"
-
-    paths:
-      - ".github/workflows/deploy-vercel-staging.yml"
-      - "public/**"
-      - "src/**"
-      - ".eslint*"
-      - "*.js*"
-      - "*.ts"
-      - ".*ignore"
-      - "yarn.lock"
-      - "!**/*.md"
 
 jobs:
   build:
@@ -22,15 +11,20 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
     - name: Install Node.js 14
       uses: actions/setup-node@v2
       with:
         node-version: "14"
+
     - name: Install dependancies
       run: npm install
+
     - name: Run formatter
       run: npm run format:check
+
     - name: Run linter
       run: npm run lint
+
     - name: Run test suite
       run: npm run test
