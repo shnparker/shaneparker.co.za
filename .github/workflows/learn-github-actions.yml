@@ -48,6 +48,7 @@ jobs:
     runs-on: ubuntu-18.04
     needs: setup-environment
     steps:
+      - name: "Lint and format code"
         run: npm format:check
         run: npm lint
-        run: npm test
+        # run: npm test
