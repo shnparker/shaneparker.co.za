@@ -1,5 +1,5 @@
 # Creates a new preview deployment on Vercel's platform, when anything is pushed in any branch (except for the "master" branch).
-name: Deploy staging
+name: Deploy to Vercel (staging)
 on:
   push:
     branches-ignore:
