@@ -2,7 +2,7 @@
 name: Deploy to Vercel (staging)
 
 on:
-  [push]:
+  push:
     branches-ignore:
       - "master"
 
